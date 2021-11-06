@@ -1,0 +1,22 @@
+{
+  "name": "ciphering-cli-tool",
+  "version": "1.0.0",
+  "description": "a CLI for encoding and deoding",
+  "main": "bin/index.js",
+  "bin": {
+    "cipher-cli": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katya-petrova/ciphering-CLI-tool.git"
+  },
+  "author": "katya-petrova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katya-petrova/ciphering-CLI-tool/issues"
+  },
+  "homepage": "https://github.com/katya-petrova/ciphering-CLI-tool#readme"
+}
