@@ -67,7 +67,7 @@ function caesarROT8(str, cipherType) {
         continue;
       }
 
-      if (charCode >= 65 && code <= 90) {
+      if (charCode >= 65 && charCode <= 90) {
         res += String.fromCharCode(charCode + (90 - charCode - (charCode - 65)));
         continue;
       }
