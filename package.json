@@ -1,7 +1,7 @@
 {
   "name": "ciphering-cli-tool",
   "version": "1.0.0",
-  "description": "a CLI for encoding and deoding",
+  "description": "a CLI for encoding and decoding",
   "main": "bin/index.js",
   "bin": {
     "cipher-cli": "./bin/index.js"
