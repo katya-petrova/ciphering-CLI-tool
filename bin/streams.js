@@ -17,8 +17,6 @@ function validatePath(pathToCheck) {
 }
 
 const readStreamFunction = (input) => {
-
-
   return input
     ? validatePath(input)
       ? fs.createReadStream(path.join(__dirname, "..", input))

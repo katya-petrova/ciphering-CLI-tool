@@ -1,4 +1,4 @@
-# Caesar cipher CLI tool
+# ciphering-CLI-tool
 
 ## About
 
@@ -11,8 +11,8 @@ CLI tool that will encode and decode a text by 3 substitution ciphers:
 
 Open command line in the folder where you want to clone this program. Clone repository using command below.
 ```bash
-git clone https://github.com/Hellsingi/CLI-tool.git
-git checkout Caesar_cipher_cli
+git clone https://github.com/katya-petrova/ciphering-CLI-tool.git
+git checkout dev
 ```
 
 Install dependencies
@@ -33,11 +33,10 @@ Config is a string with pattern `{XY(-)}n`, where:
   * `Y` is flag of encoding or decoding (mandatory for Caesar cipher and ROT-8 cipher and should not be passed Atbash cipher)
     * `1` is for encoding
     * `0` is for decoding
+    * **required**
 2.  **-i, --input**: a path to input file
 3.  **-o, --output**: a path to output file
      **required**
-2.  **-i, --input**: an input file (String. May be as relative as absolute. If the option is not specified you'll have the opportunity to enter text in the command line. ) **optional**
-3.  **-o, --output**: an output file (The same as the input above.) **optional**
 
 ## Usage example:
 
@@ -69,7 +68,5 @@ $ cipher-cli -c "A-A-A-R1-R0-R0-R0-C1-C1-A" -i "./input.txt" -o "./output.txt"
 > `This is secret. Message about "_" symbol!`
 
 > output.txt
-> `Hvwg wg gsqfsh. Asggous opcih "_" gmapcz!`a decode -s 13
+> `Hvwg wg gsqfsh. Asggous opcih "_" gmapcz!`
 ```
-
-
