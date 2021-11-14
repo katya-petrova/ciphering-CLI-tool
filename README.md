@@ -12,7 +12,7 @@ CLI tool that will encode and decode a text by 3 substitution ciphers:
 Open command line in the folder where you want to clone this program. Clone repository using command below.
 ```bash
 git clone https://github.com/katya-petrova/ciphering-CLI-tool.git
-git checkout Caesar_cipher_cli
+git checkout dev
 ```
 
 Install dependencies
