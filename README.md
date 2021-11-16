@@ -41,7 +41,7 @@ Config is a string with pattern `{XY(-)}n`, where:
 ## Usage example:
 
 ```bash
-$ cipher-cli -c "C1-C1-R0-A" -i "./input.txt" -o "./output.txt"
+$ node bin/index.js -c "C1-C1-R0-A" -i "./input.txt" -o "./output.txt"
 ```
 
 > input.txt
@@ -51,7 +51,7 @@ $ cipher-cli -c "C1-C1-R0-A" -i "./input.txt" -o "./output.txt"
 > `Myxn xn nbdobm. Tbnnfzb ferlm "_" nhteru!`
 
 ```bash
-$ cipher-cli -c "C1-C0-A-R1-R0-A-R0-R0-C1-A" -i "./input.txt" -o "./output.txt"
+$ node bin/index.js -c "C1-C0-A-R1-R0-A-R0-R0-C1-A" -i "./input.txt" -o "./output.txt"
 ```
 
 > input.txt
@@ -61,7 +61,7 @@ $ cipher-cli -c "C1-C0-A-R1-R0-A-R0-R0-C1-A" -i "./input.txt" -o "./output.txt"
 > `Vhgw gw wkmxkv. Ckwwoik onauv "_" wqcnad!`
 
 ```bash
-$ cipher-cli -c "A-A-A-R1-R0-R0-R0-C1-C1-A" -i "./input.txt" -o "./output.txt"
+$ node bin/index.js -c "A-A-A-R1-R0-R0-R0-C1-C1-A" -i "./input.txt" -o "./output.txt"
 ```
 
 > input.txt
