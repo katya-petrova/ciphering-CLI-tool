@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for validation.js</title>
+    <title>Code coverage report for args.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> validation.js</h1>
+        <h1><a href="index.html">All files</a> args.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>21/21</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/12</span>
+                <span class='fraction'>20/20</span>
             </div>
         
             
@@ -84,60 +84,102 @@
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">function checkConfig(config) {
-  if (!config) {
-    process.stderr.write("Error, no config provided" + "\n");
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// const args = process.argv.slice(2);
+const argsTypes = ["-c --config", "-i --input", "-o --output"];
+const map = new Map();
+const argsMap = {};
+&nbsp;
+function parseArgs(args) {
+  for (let i = 0; i &lt; args.length; i += 2) {
+    const findArgIndex = argsTypes.findIndex((type) =&gt; {
+      const splittedType = type.split(" ");
+      return (
+        args[i] === splittedType[0] ||
+        args[i] === splittedType[1]
+      );
+    });
+&nbsp;
+    if (findArgIndex !== -1) {
+      const foundType = argsTypes[findArgIndex];
+      if (!map.has(foundType)) {
+        map.set(foundType, args[i + 1]);
+      }
+    } else {
+      handleError(new Error("There's something wrong with arguments, please, reenter"));
+    }
+  }
+&nbsp;
+  map.forEach((val, key) =&gt; {
+    const mapKey = key.split(" ")[1].slice(2);
+    argsMap[mapKey] = val;
+  });
+&nbsp;
+  return argsMap;
+}
+&nbsp;
+function handleError(err) {
+  if (err) {
+    process.stderr.write(err.message + "\n");
     process.exit(1);
   }
 }
 &nbsp;
-function getValue(flag, inputArg) {
-  const flagIndex = inputArg.indexOf(flag);
-  return flagIndex !== -1 ? inputArg[flagIndex + 1].trim() : <span class="branch-1 cbranch-no" title="branch not covered" >null;</span>
-}
-&nbsp;
-function errorConfig() {
-  process.stderr.write("Config argument is invalid or missing!" + "\n");
-  process.exit(1);
-}
-&nbsp;
- function validateArgumentsConfig(inputArg) {
-  const regexp = /^((C[0,1])+[-]?|(R[0,1])+[-]?|(A)+[-]?)+$/g;
-  let flag = "";
-  inputArg.indexOf("-c") != -1
-    ? (flag = inputArg.indexOf("-c"))
-    : (flag = inputArg.indexOf("--config"));
-  if (!regexp.test(getValue(inputArg[flag], inputArg))) errorConfig();
-}
-&nbsp;
-module.exports = { checkConfig, validateArgumentsConfig };
+module.exports = parseArgs;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

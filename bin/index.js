@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 const { pipeline } = require("stream");
-
-const checkConfig = require("./validation.js");
+const args = process.argv.slice(2);
+const {checkConfig, validateConfigArgs} = require("./validation.js");
 
 const {
   readStreamFunction,
@@ -10,9 +10,11 @@ const {
 } = require("./streams");
 const caesarROT8 = require("./caesar.js");
 const readArgs = require("./args.js");
-let { config, input, output } = readArgs();
+let { config, input, output } = readArgs(args);
 
 checkConfig(config);
+
+validateConfigArgs([args[0], config])
 
 config = config.split("-");
 

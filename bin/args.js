@@ -1,9 +1,9 @@
-const args = process.argv.slice(2);
+// const args = process.argv.slice(2);
 const argsTypes = ["-c --config", "-i --input", "-o --output"];
 const map = new Map();
 const argsMap = {};
 
-function parseArgs() {
+function parseArgs(args) {
   for (let i = 0; i < args.length; i += 2) {
     const findArgIndex = argsTypes.findIndex((type) => {
       const splittedType = type.split(" ");

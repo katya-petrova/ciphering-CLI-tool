@@ -9,7 +9,7 @@ function exitProcess(message, code) {
 
 function validatePath(pathToCheck) {
   let validatedPath = pathToCheck;
-
+  console.log(pathToCheck);
   if (!path.isAbsolute(pathToCheck))
     validatedPath = path.resolve(validatedPath);
 
