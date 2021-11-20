@@ -1,6 +1,8 @@
 #! /usr/bin/env node
 const { pipeline } = require("stream");
 
+const checkConfig = require("./validation.js");
+
 const {
   readStreamFunction,
   writeStreamFunction,
@@ -10,7 +12,9 @@ const caesarROT8 = require("./caesar.js");
 const readArgs = require("./args.js");
 let { config, input, output } = readArgs();
 
-config = config.split('-');
+checkConfig(config);
+
+config = config.split("-");
 
 const read = readStreamFunction(input);
 const write = writeStreamFunction(output);

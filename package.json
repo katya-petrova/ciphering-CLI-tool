@@ -7,7 +7,7 @@
     "cipher-cli": "./bin/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/katya-petrova/ciphering-CLI-tool/issues"
   },
-  "homepage": "https://github.com/katya-petrova/ciphering-CLI-tool#readme"
+  "homepage": "https://github.com/katya-petrova/ciphering-CLI-tool#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
 }
