@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637427322912" clover="3.2.0">
-  <project timestamp="1637427322914" name="All files">
+<coverage generated="1637499810236" clover="3.2.0">
+  <project timestamp="1637499810237" name="All files">
     <metrics statements="75" coveredstatements="75" conditionals="52" coveredconditionals="49" methods="10" coveredmethods="10" elements="137" coveredelements="134" complexity="0" loc="75" ncloc="75" packages="1" files="3" classes="3"/>
     <file name="args.js" path="D:\Temp\git\ciphering-cli-tool\bin\args.js">
       <metrics statements="20" coveredstatements="20" conditionals="8" coveredconditionals="7" methods="4" coveredmethods="4"/>
@@ -81,10 +81,10 @@
       <line num="14" count="2" type="stmt"/>
       <line num="15" count="2" type="stmt"/>
       <line num="19" count="3" type="stmt"/>
-      <line num="20" count="3" type="stmt"/>
       <line num="21" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="24" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="27" count="1" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
